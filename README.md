@@ -20,3 +20,7 @@ Run tests
 ```
 dotnet test ./BattleshipGame.sln
 ```
+
+## Requirements
+
+Project requires [.NET 6](https://dotnet.microsoft.com/en-us/download/dotnet/6.0)
