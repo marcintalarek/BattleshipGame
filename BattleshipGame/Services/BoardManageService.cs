@@ -25,7 +25,7 @@ namespace BattleshipGame.Services
 
             coordinatesDiscovered.Add(coordinate);
 
-            Ship? ship = _ships.Where(p => p.Coordinates.Contains(coordinate, new CoordinateEqualityComparer()))
+            Ship? ship = _ships.Where(p => p.Coordinates.Contains(coordinate))
                 .Cast<Ship?>()
                 .FirstOrDefault();
 

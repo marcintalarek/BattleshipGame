@@ -25,7 +25,7 @@ namespace BattleshipGame.Algorithms
             foreach (var shipType in Constants.ShipsOnBoard)
             {
                 var shipLocation = GenerateCoordinates(ships, shipType);
-                ships.Add(new Ship(shipType, shipLocation.ToImmutableHashSet(new CoordinateEqualityComparer())));
+                ships.Add(new Ship(shipType, shipLocation.ToImmutableHashSet()));
             }
 
             return ships;
@@ -46,7 +46,7 @@ namespace BattleshipGame.Algorithms
                     .Select(widerSideCoordinate => new Coordinate(
                         isHorizontal ? widerSideCoordinate : narrowerSideCoordinate,
                         isHorizontal ? narrowerSideCoordinate : widerSideCoordinate))
-                    .ToHashSet(new CoordinateEqualityComparer());
+                    .ToHashSet();
             } while (existingShips.Any(p => p.Coordinates.Overlaps(proposedCoordinates)));
 
             return proposedCoordinates;

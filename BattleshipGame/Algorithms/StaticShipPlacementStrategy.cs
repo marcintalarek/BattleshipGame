@@ -22,7 +22,7 @@ namespace BattleshipGame.Algorithms
             int y2)
         {
             var shipLocation = GenerateCoordinates(x1, y1, x2, y2);
-            return new Ship(shipType, ImmutableHashSet.Create<Coordinate>(new CoordinateEqualityComparer(), shipLocation.ToArray()));
+            return new Ship(shipType, ImmutableHashSet.Create<Coordinate>(shipLocation.ToArray()));
         }
 
         private static IEnumerable<Coordinate> GenerateCoordinates(int x1, int y1, int x2, int y2)

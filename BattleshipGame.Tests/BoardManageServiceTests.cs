@@ -30,7 +30,7 @@ namespace BattleshipGame.Tests
             var shipPlacementStrategy = Substitute.For<IShipPlacementStrategy>();
             shipPlacementStrategy.GenerateShips().Returns(new List<Ship>
             {
-                new Ship(ShipType.Carrier, ImmutableHashSet.Create(new CoordinateEqualityComparer(), new Coordinate(1,1)))
+                new Ship(ShipType.Carrier, ImmutableHashSet.Create(new Coordinate(1,1)))
             });
             var boardManageService = new BoardManageService(shipPlacementStrategy);
             var coordinate = new Coordinate(1, 1);
@@ -59,7 +59,7 @@ namespace BattleshipGame.Tests
             var shipPlacementStrategy = Substitute.For<IShipPlacementStrategy>();
             shipPlacementStrategy.GenerateShips().Returns(new List<Ship>
             {
-                new Ship(ShipType.Carrier, ImmutableHashSet.Create(new CoordinateEqualityComparer(), new Coordinate(1,1), new Coordinate(1,2)))
+                new Ship(ShipType.Carrier, ImmutableHashSet.Create(new Coordinate(1,1), new Coordinate(1,2)))
             });
             var boardManageService = new BoardManageService(shipPlacementStrategy);
 
@@ -91,7 +91,6 @@ namespace BattleshipGame.Tests
             shipPlacementStrategy.GenerateShips().Returns(new List<Ship>
             {
                 new Ship(ShipType.Carrier, ImmutableHashSet.Create(
-                    new CoordinateEqualityComparer(),
                     new Coordinate(0,0),
                     new Coordinate(0,1),
                     new Coordinate(0,2),
@@ -142,9 +141,7 @@ namespace BattleshipGame.Tests
             var shipPlacementStrategy = Substitute.For<IShipPlacementStrategy>();
             shipPlacementStrategy.GenerateShips().Returns(new List<Ship>
             {
-                new Ship(ShipType.Carrier, ImmutableHashSet.Create(
-                    new CoordinateEqualityComparer(),
-                    new Coordinate(1,2)))
+                new Ship(ShipType.Carrier, ImmutableHashSet.Create(new Coordinate(1,2)))
             });
             var boardManageService = new BoardManageService(shipPlacementStrategy);
 
