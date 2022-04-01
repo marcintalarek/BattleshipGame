@@ -16,6 +16,11 @@ Run solution
 dotnet run --project BattleshipGame
 ```
 
+Run solution with static ship coordinates
+```
+dotnet run --project BattleshipGame --static=true
+```
+
 Run tests
 ```
 dotnet test ./BattleshipGame.sln
