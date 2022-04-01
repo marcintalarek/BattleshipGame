@@ -16,7 +16,8 @@ Run solution
 dotnet run --project BattleshipGame
 ```
 
-Run solution with static ship coordinates
+Run solution with static ships coordinates 
+* (coordinates C3-C7, D10-G10, I6-I9) *
 ```
 dotnet run --project BattleshipGame --static=true
 ```
