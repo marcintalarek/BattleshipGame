@@ -2,7 +2,7 @@
 
 namespace BattleshipGame.Models
 {
-    public class CoordinateProvidedEventArgs : EventArgs
+    internal class CoordinateProvidedEventArgs : EventArgs
     {
         public CoordinateProvidedEventArgs(string coordinate)
         {

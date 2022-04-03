@@ -15,4 +15,14 @@
     </PackageReference>
   </ItemGroup>
 
+    <!--<ItemGroup>
+	    <AssemblyAttribute Include="System.Runtime.CompilerServices.InternalsVisibleToAttribute">
+		    <_Parameter1>$(AssemblyName).Tests</_Parameter1>
+	    </AssemblyAttribute>
+    </ItemGroup>-->
+	<ItemGroup>
+		<InternalsVisibleTo Include="$(AssemblyName).Tests" />
+		<InternalsVisibleTo Include="DynamicProxyGenAssembly2" />
+	</ItemGroup>
+
 </Project>

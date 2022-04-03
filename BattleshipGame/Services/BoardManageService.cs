@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace BattleshipGame.Services
 {
-    public class BoardManageService : IBoardManageService
+    internal class BoardManageService : IBoardManageService
     {
         private readonly IEnumerable<Ship> _ships;
         private readonly HashSet<Coordinate> coordinatesDiscovered = new();

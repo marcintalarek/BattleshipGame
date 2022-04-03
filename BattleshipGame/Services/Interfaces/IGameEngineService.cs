@@ -1,6 +1,6 @@
 ﻿namespace BattleshipGame.Services.Interfaces
 {
-    public interface IGameEngineService
+    internal interface IGameEngineService
     {
         void Run();
     }

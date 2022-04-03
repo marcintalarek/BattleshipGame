@@ -19,7 +19,7 @@ namespace BattleshipGame.Tests
         [InlineData("A11")]
         [InlineData("A100")]
         [InlineData("X10")]
-        public void Validation_WrongInput_ReturnsError(string value)
+        internal void Validation_WrongInput_ReturnsError(string value)
         {
             var eventArgs = new CoordinateProvidedEventArgs(value);
 
@@ -40,7 +40,7 @@ namespace BattleshipGame.Tests
         [InlineData("J9")]
         [InlineData("j10")]
         [InlineData("J10")]
-        public void Validation_CorrectInput_DoesNotReturnError(string value)
+        internal void Validation_CorrectInput_DoesNotReturnError(string value)
         {
             var eventArgs = new CoordinateProvidedEventArgs(value);
 

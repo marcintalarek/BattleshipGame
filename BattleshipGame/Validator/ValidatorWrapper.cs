@@ -2,7 +2,7 @@
 
 namespace BattleshipGame.Validator
 {
-    public class ValidatorWrapper : IValidatorWrapper
+    internal class ValidatorWrapper : IValidatorWrapper
     {
         public bool TryValidateObject(object instance, out ICollection<ValidationResult> validationResults)
         {

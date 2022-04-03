@@ -40,7 +40,7 @@ namespace BattleshipGame.Tests
         }
 
         [Fact]
-        public void GenerateShips_NumberOfGeneratedShipsAndCoordinates_IsValid()
+        internal void GenerateShips_NumberOfGeneratedShipsAndCoordinates_IsValid()
         {
             int numberOfShips = 0;
             int numberOfCoordinates = 0;
@@ -72,7 +72,7 @@ namespace BattleshipGame.Tests
         [InlineData(4, 9, ShipType.Battleship, 2)]
         [InlineData(5, 9, ShipType.Battleship, 2)]
         [InlineData(6, 9, ShipType.Battleship, 2)]
-        public void GenerateShips_ShipCoordinatesSetup_FulfilledCorrectly(
+        internal void GenerateShips_ShipCoordinatesSetup_FulfilledCorrectly(
             int x,
             int y,
             ShipType shipType,

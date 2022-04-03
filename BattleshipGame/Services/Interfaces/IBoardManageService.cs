@@ -2,7 +2,7 @@
 
 namespace BattleshipGame.Services.Interfaces
 {
-    public interface IBoardManageService
+    internal interface IBoardManageService
     {
         ShipHit? Shot(Coordinate coordinate);
         

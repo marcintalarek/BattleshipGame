@@ -2,7 +2,7 @@
 
 namespace BattleshipGame.Algorithms.Interfaces
 {
-    public interface IShipPlacementStrategy
+    internal interface IShipPlacementStrategy
     {
         IEnumerable<Ship> GenerateShips();
     }

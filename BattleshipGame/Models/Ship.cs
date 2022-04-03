@@ -2,7 +2,7 @@
 
 namespace BattleshipGame.Models
 {
-    public readonly struct Ship
+    internal readonly struct Ship
     {
         public Ship(ShipType shipType, ImmutableHashSet<Coordinate> coordinates)
         {

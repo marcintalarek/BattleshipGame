@@ -4,7 +4,7 @@ using System.Collections.Immutable;
 
 namespace BattleshipGame.Algorithms
 {
-    public class RandomShipPlacementStrategy : IShipPlacementStrategy
+    internal class RandomShipPlacementStrategy : IShipPlacementStrategy
     {
         private readonly Random _random;
 

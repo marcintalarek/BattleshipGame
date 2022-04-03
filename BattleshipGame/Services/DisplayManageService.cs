@@ -3,9 +3,9 @@ using BattleshipGame.Services.Interfaces;
 
 namespace BattleshipGame.Services
 {
-    public delegate void CoordinateProvidedEventHandler(CoordinateProvidedEventArgs e);
+    internal delegate void CoordinateProvidedEventHandler(CoordinateProvidedEventArgs e);
 
-    public class DisplayManageService : IDisplayManageService
+    internal class DisplayManageService : IDisplayManageService
     {
         public event CoordinateProvidedEventHandler? CoordinateProvided;
 

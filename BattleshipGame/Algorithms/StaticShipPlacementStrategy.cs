@@ -4,7 +4,7 @@ using System.Collections.Immutable;
 
 namespace BattleshipGame.Algorithms
 {
-    public class StaticShipPlacementStrategy : IShipPlacementStrategy
+    internal class StaticShipPlacementStrategy : IShipPlacementStrategy
     {
         public IEnumerable<Ship> GenerateShips()
             => new List<Ship>

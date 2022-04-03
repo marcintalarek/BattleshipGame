@@ -3,7 +3,7 @@ using BattleshipGame.Services.Interfaces;
 
 namespace BattleshipGame.Services
 {
-    public class CoordinatesConversionService : ICoordinatesConvertionService
+    internal class CoordinatesConversionService : ICoordinatesConvertionService
     {
         public Coordinate ConvertAlphanumericToCoordinate(string value)
         {

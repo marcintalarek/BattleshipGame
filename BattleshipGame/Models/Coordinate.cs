@@ -1,6 +1,6 @@
 ﻿namespace BattleshipGame.Models
 {
-    public readonly struct Coordinate
+    internal readonly struct Coordinate
     {
         public Coordinate(int x, int y)
         {

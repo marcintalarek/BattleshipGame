@@ -2,7 +2,7 @@
 
 namespace BattleshipGame.Validator
 {
-    public interface IValidatorWrapper
+    internal interface IValidatorWrapper
     {
         bool TryValidateObject(object instance, out ICollection<ValidationResult> validationResults);
     }

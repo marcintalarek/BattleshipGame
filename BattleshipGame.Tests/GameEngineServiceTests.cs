@@ -36,7 +36,7 @@ namespace BattleshipGame.Tests
         }
 
         [Fact]
-        public void Run_OnExecution_EventIsNotExecuted_And_ViewIsDrew()
+        internal void Run_OnExecution_EventIsNotExecuted_And_ViewIsDrew()
         {
             _boardManageService.GetDiscoveredCoordinates().Returns(_discoveredCoordinates);
             bool wasEventExecuted = false;
@@ -48,7 +48,7 @@ namespace BattleshipGame.Tests
         }
 
         [Fact]
-        public void DisplayManagerServiceCoordinateProvided_IfCoordinateInvalid_DrawsErrorView()
+        internal void DisplayManagerServiceCoordinateProvided_IfCoordinateInvalid_DrawsErrorView()
         {
             var eventArgs = new CoordinateProvidedEventArgs(CoordinateAlphanumeric);
             _validatorWrapper.TryValidateObject(eventArgs, out Arg.Any<ICollection<ValidationResult>>()).Returns(false);
@@ -61,7 +61,7 @@ namespace BattleshipGame.Tests
         }
 
         [Fact]
-        public void DisplayManagerServiceCoordinateProvided_IfGameFinished_DrawsFinalView()
+        internal void DisplayManagerServiceCoordinateProvided_IfGameFinished_DrawsFinalView()
         {
             var eventArgs = new CoordinateProvidedEventArgs(CoordinateAlphanumeric);
             _validatorWrapper.TryValidateObject(eventArgs, out _).Returns(true);
@@ -75,7 +75,7 @@ namespace BattleshipGame.Tests
         }
 
         [Fact]
-        public void DisplayManagerServiceCoordinateProvided_IfGameNotFinished_DrawsValidView()
+        internal void DisplayManagerServiceCoordinateProvided_IfGameNotFinished_DrawsValidView()
         {
             var eventArgs = new CoordinateProvidedEventArgs(CoordinateAlphanumeric);
             _validatorWrapper.TryValidateObject(eventArgs, out _).Returns(true);
@@ -90,7 +90,7 @@ namespace BattleshipGame.Tests
         }
 
         [Fact]
-        public void DisplayManagerServiceCoordinateProvided_ShotThrowsArgumentException_DrawsErrorView()
+        internal void DisplayManagerServiceCoordinateProvided_ShotThrowsArgumentException_DrawsErrorView()
         {
             const string exceptionMessage = "test";
             var eventArgs = new CoordinateProvidedEventArgs(CoordinateAlphanumeric);

@@ -10,7 +10,7 @@ namespace BattleshipGame.Tests
         [InlineData("b3", 1, 2)]
         [InlineData("c2", 2, 1)]
         [InlineData("j10", 9, 9)]
-        public void ConvertAlphanumericToCoordinate_ValidInput_ReturnsCoordinateProperly(string value, int x, int y)
+        internal void ConvertAlphanumericToCoordinate_ValidInput_ReturnsCoordinateProperly(string value, int x, int y)
         {
             var coordinatesConversionService = new CoordinatesConversionService();
 

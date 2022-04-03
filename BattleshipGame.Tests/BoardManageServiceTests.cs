@@ -12,7 +12,7 @@ namespace BattleshipGame.Tests
     public class BoardManageServiceTests
     {
         [Fact]
-        public void Shot_SameCordinateForEmptyField_ThrowsValidationException()
+        internal void Shot_SameCordinateForEmptyField_ThrowsValidationException()
         {
             var shipPlacementStrategy = Substitute.For<IShipPlacementStrategy>();
             var boardManageService = new BoardManageService(shipPlacementStrategy);
@@ -25,7 +25,7 @@ namespace BattleshipGame.Tests
         }
 
         [Fact]
-        public void Shot_SameCordinateForFieldWithShip_ThrowsValidationException()
+        internal void Shot_SameCordinateForFieldWithShip_ThrowsValidationException()
         {
             var shipPlacementStrategy = Substitute.For<IShipPlacementStrategy>();
             shipPlacementStrategy.GenerateShips().Returns(new List<Ship>
@@ -42,7 +42,7 @@ namespace BattleshipGame.Tests
         }
 
         [Fact]
-        public void Shot_CoordinateWithoutShip_ReturnsNull()
+        internal void Shot_CoordinateWithoutShip_ReturnsNull()
         {
             var shipPlacementStrategy = Substitute.For<IShipPlacementStrategy>();
             var boardManageService = new BoardManageService(shipPlacementStrategy);
@@ -54,7 +54,7 @@ namespace BattleshipGame.Tests
         }
 
         [Fact]
-        public void Shot_CoordinateWithShip_ReturnsTypeAndIfSunkProperly()
+        internal void Shot_CoordinateWithShip_ReturnsTypeAndIfSunkProperly()
         {
             var shipPlacementStrategy = Substitute.For<IShipPlacementStrategy>();
             shipPlacementStrategy.GenerateShips().Returns(new List<Ship>
@@ -74,7 +74,7 @@ namespace BattleshipGame.Tests
         }
 
         [Fact]
-        public void AreAllShipsSunk_WithoutHittingOfAllShips_ReturnsFalse()
+        internal void AreAllShipsSunk_WithoutHittingOfAllShips_ReturnsFalse()
         {
             var shipPlacementStrategy = Substitute.For<IShipPlacementStrategy>();
             var boardManageService = new BoardManageService(shipPlacementStrategy);
@@ -85,7 +85,7 @@ namespace BattleshipGame.Tests
         }
 
         [Fact]
-        public void AreAllShipsSunk_WithHittingOfAllThirteenShips_ReturnsTrue()
+        internal void AreAllShipsSunk_WithHittingOfAllThirteenShips_ReturnsTrue()
         {
             var shipPlacementStrategy = Substitute.For<IShipPlacementStrategy>();
             shipPlacementStrategy.GenerateShips().Returns(new List<Ship>
@@ -125,7 +125,7 @@ namespace BattleshipGame.Tests
         }
 
         [Fact]
-        public void GetDiscoveredCoordinates_ForNoShots_ReturnsEmptyDictionary()
+        internal void GetDiscoveredCoordinates_ForNoShots_ReturnsEmptyDictionary()
         {
             var shipPlacementStrategy = Substitute.For<IShipPlacementStrategy>();
             var boardManageService = new BoardManageService(shipPlacementStrategy);
@@ -136,7 +136,7 @@ namespace BattleshipGame.Tests
         }
 
         [Fact]
-        public void GetDiscoveredCoordinates_ForOneHitAndOneMiss_ReturnsTwoElementsInDictionary()
+        internal void GetDiscoveredCoordinates_ForOneHitAndOneMiss_ReturnsTwoElementsInDictionary()
         {
             var shipPlacementStrategy = Substitute.For<IShipPlacementStrategy>();
             shipPlacementStrategy.GenerateShips().Returns(new List<Ship>

@@ -1,6 +1,6 @@
 ﻿namespace BattleshipGame.Models
 {
-    public readonly struct ShipHit
+    internal readonly struct ShipHit
     {
         public ShipHit(ShipType shipType, bool isShipSunk)
         {

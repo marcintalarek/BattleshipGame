@@ -2,7 +2,7 @@
 
 namespace BattleshipGame.Services.Interfaces
 {
-    public interface ICoordinatesConvertionService
+    internal interface ICoordinatesConvertionService
     {
         Coordinate ConvertAlphanumericToCoordinate(string value);
     }

@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace BattleshipGame.Services
 {
-    public class GameEngineService : IGameEngineService
+    internal class GameEngineService : IGameEngineService
     {
         private readonly IBoardManageService _boardManageService;
         private readonly ICoordinatesConvertionService _coordinatesConvertionService;

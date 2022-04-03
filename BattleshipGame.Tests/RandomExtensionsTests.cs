@@ -13,7 +13,7 @@ namespace BattleshipGame.Tests
         [InlineData(0.5, true)]
         [InlineData(0.5001, true)]
         [InlineData(0.9999, true)]
-        public void NextBool_RandomDoubleNumber_ReturnsBoolCorrectly(double nextDouble, bool result)
+        internal void NextBool_RandomDoubleNumber_ReturnsBoolCorrectly(double nextDouble, bool result)
         {
             var random = Substitute.For<Random>();
             random.NextDouble().Returns(nextDouble);

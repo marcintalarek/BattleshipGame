@@ -2,7 +2,7 @@
 
 namespace BattleshipGame.Services.Interfaces
 {
-    public interface IDisplayManageService
+    internal interface IDisplayManageService
     {
         event CoordinateProvidedEventHandler? CoordinateProvided;
 
